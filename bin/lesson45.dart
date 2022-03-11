@@ -22,8 +22,8 @@ class BankCard{
   int get balance => _balance;
   set balance(int val) => _balance=val;
   int get yearsLeft => validityPeriod  - 2022;
-  void put(int money) => balance+money;
-  void take(int money) => balance-money;
+  void put(int money) => balance+=money;
+  void take(int money) => balance-=money;
   BankCard.vip(this.owner, this.account): validityPeriod=2037,_balance=15000000;
 
 
